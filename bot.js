@@ -1,4 +1,4 @@
-//ライブラリ
+//ライブラリのrequire
 const {Client, Intents} = require('discord.js');
 const httpcli = require('cheerio-httpcli');
 const dotenv = require('dotenv');
