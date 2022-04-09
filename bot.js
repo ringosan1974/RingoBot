@@ -1,8 +1,6 @@
-//ライブラリのrequire
 const {Client, Intents, Message} = require('discord.js');
 const dotenv = require('dotenv');
 
-//Botの設定
 const client = new Client({partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
 intents: ['DIRECT_MESSAGES',
           'DIRECT_MESSAGE_REACTIONS',
@@ -28,6 +26,7 @@ client.on('ready', async() => {
 
 client.on('messageCreate', async msg => {
   if(!msg.content.startsWith(prefix)) return;
+  const [command, ...args] = msg.content.slice(prefix.length).split(' ');
   if (command === 'save'){
     msg.fetch(msg.reference.messageId)
       .then(message => {
