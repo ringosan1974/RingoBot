@@ -1,2 +1,2 @@
 # RingoBot
-discord.jsを用いて開発中のタスク宣言DiscordBot。
+discord.jsを用いて開発中の名言保存DiscordBot。
