@@ -26,7 +26,7 @@ client.on('ready', async() => {
 
 client.on('messageCreate', async msg => {
   if(!msg.content.startsWith(prefix)) return;
-  const [command, ...args] = msg.content.slice(prefix.length).split(' ');
+  const command = msg.content.slice(prefix.length);
   if (command === 'save'){
     msg.fetch(msg.reference.messageId)
       .then(message => {
