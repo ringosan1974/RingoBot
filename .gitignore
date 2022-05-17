@@ -1,0 +1,4 @@
+*.txt
+.env
+bot_oldversion.js
+node_modules
